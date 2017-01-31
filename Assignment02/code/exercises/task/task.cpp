@@ -229,8 +229,19 @@ bool initDice()
   // It is helpful to compute this transformation on a sheet of paper.
 
   //gDice[5] should be the cube with number 6 facing the camera
+  
+  /*
   gDice[5]->modelMatrix().rotate(90,ogl::Vec3f(0.0f, 1.0f, 0.0f));
   gDice[5]->modelMatrix().translate(0, 0, 0.5);
+  */
+
+  // For Task 2.1 b
+  gDice[5]->modelMatrix().rotate(-90, ogl::Vec3f(0.0f, 0.0f, 1.0f));
+  gDice[5]->modelMatrix().rotate(90, ogl::Vec3f(0.0f, 1.0f, 0.0f));
+  gDice[5]->modelMatrix().rotate(-45, ogl::Vec3f(0.0f, 1.0f, 0.0f));
+  gDice[5]->modelMatrix().rotate(35, ogl::Vec3f(1.0f, 0.0f, 0.0f));
+
+  gDice[5]->modelMatrix().translate(2, 3.1, 4.6);
 
   return true;
 }
