@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -dynamiclib -Wl,-headerpad_max_install_names  -o ../../libraytracer.dylib -install_name /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment02/code/build/libraytracer.dylib CMakeFiles/raytracer.dir/Image.cpp.o 

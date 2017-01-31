@@ -204,27 +204,33 @@ bool initDice()
   //TODO: Replace these simple transformations
 
   //gDice[0] should be the large cube with number 1 facing the camera
-  gDice[0]->modelMatrix().translate(3,3,0);
-
+  gDice[0]->modelMatrix().rotate(-90,ogl::Vec3f(0.0f, 1.0f, 0.0f));
+  gDice[0]->modelMatrix().scale(2, 2, 2);
+  gDice[0]->modelMatrix().translate(4, 3, 1);
+  
   //gDice[1] should be the cube with number 2 facing the camera
-  gDice[1]->modelMatrix().translate(3,3,1);
-
+  gDice[1]->modelMatrix().rotate(90,ogl::Vec3f(0.0f, 0.0f, 1.0f));
+  gDice[1]->modelMatrix().translate(2.5,2.5,2);
+  
   //gDice[2] should be the cube with number 3 facing the camera
-  gDice[2]->modelMatrix().translate(3,3,2);
-
+  gDice[2]->modelMatrix().rotate(180,ogl::Vec3f(0.0f, 0.0f, 1.0f));
+  gDice[2]->modelMatrix().translate(2.5,3.5,2);
+  
   //gDice[3] should be the cube with number 4 facing the camera
-  gDice[3]->modelMatrix().translate(3,3,3);
+  gDice[3]->modelMatrix().translate(2.5,2.5,3);
 
   //gDice[4] should be the cube with number 5 facing the camera
-  gDice[4]->modelMatrix().translate(3,3,4);
-
+  gDice[4]->modelMatrix().rotate(-90,ogl::Vec3f(0.0f, 0.0f, 1.0f));
+  gDice[4]->modelMatrix().translate(2.5,3.5,3);
+  
   // Hint for gDice[5] that stands on the tip showing number 6
   // the rotation that is performed on this die is equivalent to the rotation
   // of the vector (1,1,1)^T onto the z-axis (0,0,1).
   // It is helpful to compute this transformation on a sheet of paper.
 
   //gDice[5] should be the cube with number 6 facing the camera
-  gDice[5]->modelMatrix().translate(3,3,5);
+  gDice[5]->modelMatrix().rotate(90,ogl::Vec3f(0.0f, 1.0f, 0.0f));
+  gDice[5]->modelMatrix().translate(0, 0, 0.5);
 
   return true;
 }
