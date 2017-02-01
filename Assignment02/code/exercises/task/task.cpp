@@ -26,6 +26,11 @@ std::string gDataPath= ""; ///< The path pointing to the resources (OBJ, shader)
 // Display the dice
 void displayDice()
 {
+  // Task 2 - animation
+  gDice[5]->modelMatrix().translate(-4.0f - 5.0f * cosf(2.0f * M_PI * glfwGetTime()), -4.0f - 5.0f * sinf(2.0f * M_PI * glfwGetTime()), 0);
+  gDice[5]->modelMatrix().rotate(gLastFrameTime*30.0f,ogl::Vec3f(0,0,1));
+  gDice[5]->modelMatrix().translate(4.0f + 5.0f * cosf(2.0f * M_PI * glfwGetTime()), 4.0f + 5.0f * sinf(2.0f * M_PI * glfwGetTime()), 0);
+
   for(size_t i=0;i<gDice.size();++i)
   {
     // Set the updated light positions
