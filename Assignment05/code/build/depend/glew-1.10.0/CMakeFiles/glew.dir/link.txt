@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc   -dynamiclib -Wl,-headerpad_max_install_names  -o ../../libglew.dylib -install_name /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/libglew.dylib CMakeFiles/glew.dir/src/glew.c.o -framework OpenGL 

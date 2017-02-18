@@ -1,0 +1,454 @@
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5fa5f/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_5fa5f.dir/build.make CMakeFiles/cmTC_5fa5f.dir/build
+Building C object CMakeFiles/cmTC_5fa5f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_5fa5f.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: unsupported argument 'libomp' to option 'fopenmp='
+make[1]: *** [CMakeFiles/cmTC_5fa5f.dir/src.c.o] Error 1
+make: *** [cmTC_5fa5f/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8b75d/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8b75d.dir/build.make CMakeFiles/cmTC_8b75d.dir/build
+Building C object CMakeFiles/cmTC_8b75d.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_8b75d.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+/Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_8b75d.dir/src.c.o] Error 1
+make: *** [cmTC_8b75d/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fcb4d/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_fcb4d.dir/build.make CMakeFiles/cmTC_fcb4d.dir/build
+Building C object CMakeFiles/cmTC_fcb4d.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_fcb4d.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: unsupported option '-fopenmp'
+make[1]: *** [CMakeFiles/cmTC_fcb4d.dir/src.c.o] Error 1
+make: *** [cmTC_fcb4d/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8cea5/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8cea5.dir/build.make CMakeFiles/cmTC_8cea5.dir/build
+Building C object CMakeFiles/cmTC_8cea5.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED /openmp   -o CMakeFiles/cmTC_8cea5.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: no such file or directory: '/openmp'
+make[1]: *** [CMakeFiles/cmTC_8cea5.dir/src.c.o] Error 1
+make: *** [cmTC_8cea5/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d8877/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_d8877.dir/build.make CMakeFiles/cmTC_d8877.dir/build
+Building C object CMakeFiles/cmTC_d8877.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -Qopenmp   -o CMakeFiles/cmTC_d8877.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: unknown argument: '-Qopenmp'
+make[1]: *** [CMakeFiles/cmTC_d8877.dir/src.c.o] Error 1
+make: *** [cmTC_d8877/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9ca67/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_9ca67.dir/build.make CMakeFiles/cmTC_9ca67.dir/build
+Building C object CMakeFiles/cmTC_9ca67.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -openmp   -o CMakeFiles/cmTC_9ca67.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+/Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_9ca67.dir/src.c.o] Error 1
+make: *** [cmTC_9ca67/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8837c/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8837c.dir/build.make CMakeFiles/cmTC_8837c.dir/build
+Building C object CMakeFiles/cmTC_8837c.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -xopenmp   -o CMakeFiles/cmTC_8837c.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: language not recognized: 'openmp'
+clang: warning: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c: 'linker' input unused
+make[1]: *** [CMakeFiles/cmTC_8837c.dir/src.c.o] Error 1
+make: *** [cmTC_8837c/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_83677/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_83677.dir/build.make CMakeFiles/cmTC_83677.dir/build
+Building C object CMakeFiles/cmTC_83677.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED +Oopenmp   -o CMakeFiles/cmTC_83677.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: no such file or directory: '+Oopenmp'
+make[1]: *** [CMakeFiles/cmTC_83677.dir/src.c.o] Error 1
+make: *** [cmTC_83677/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2fcb1/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_2fcb1.dir/build.make CMakeFiles/cmTC_2fcb1.dir/build
+Building C object CMakeFiles/cmTC_2fcb1.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -qsmp   -o CMakeFiles/cmTC_2fcb1.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: unknown argument: '-qsmp'
+make[1]: *** [CMakeFiles/cmTC_2fcb1.dir/src.c.o] Error 1
+make: *** [cmTC_2fcb1/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a68b/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_0a68b.dir/build.make CMakeFiles/cmTC_0a68b.dir/build
+Building C object CMakeFiles/cmTC_0a68b.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -DOpenMP_FLAG_DETECTED -mp   -o CMakeFiles/cmTC_0a68b.dir/src.c.o   -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.c
+clang: error: unknown argument: '-mp'
+make[1]: *** [CMakeFiles/cmTC_0a68b.dir/src.c.o] Error 1
+make: *** [cmTC_0a68b/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eab1d/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_eab1d.dir/build.make CMakeFiles/cmTC_eab1d.dir/build
+Building CXX object CMakeFiles/cmTC_eab1d.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_eab1d.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unsupported argument 'libomp' to option 'fopenmp='
+make[1]: *** [CMakeFiles/cmTC_eab1d.dir/src.cxx.o] Error 1
+make: *** [cmTC_eab1d/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b90fa/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_b90fa.dir/build.make CMakeFiles/cmTC_b90fa.dir/build
+Building CXX object CMakeFiles/cmTC_b90fa.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_b90fa.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b90fa.dir/src.cxx.o] Error 1
+make: *** [cmTC_b90fa/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e0a61/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_e0a61.dir/build.make CMakeFiles/cmTC_e0a61.dir/build
+Building CXX object CMakeFiles/cmTC_e0a61.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_e0a61.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unsupported option '-fopenmp'
+make[1]: *** [CMakeFiles/cmTC_e0a61.dir/src.cxx.o] Error 1
+make: *** [cmTC_e0a61/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9039d/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_9039d.dir/build.make CMakeFiles/cmTC_9039d.dir/build
+Building CXX object CMakeFiles/cmTC_9039d.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED /openmp   -o CMakeFiles/cmTC_9039d.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: no such file or directory: '/openmp'
+make[1]: *** [CMakeFiles/cmTC_9039d.dir/src.cxx.o] Error 1
+make: *** [cmTC_9039d/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a077c/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_a077c.dir/build.make CMakeFiles/cmTC_a077c.dir/build
+Building CXX object CMakeFiles/cmTC_a077c.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED -Qopenmp   -o CMakeFiles/cmTC_a077c.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-Qopenmp'
+make[1]: *** [CMakeFiles/cmTC_a077c.dir/src.cxx.o] Error 1
+make: *** [cmTC_a077c/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8c824/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8c824.dir/build.make CMakeFiles/cmTC_8c824.dir/build
+Building CXX object CMakeFiles/cmTC_8c824.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED -openmp   -o CMakeFiles/cmTC_8c824.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_8c824.dir/src.cxx.o] Error 1
+make: *** [cmTC_8c824/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc4de/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_bc4de.dir/build.make CMakeFiles/cmTC_bc4de.dir/build
+Building CXX object CMakeFiles/cmTC_bc4de.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED -xopenmp   -o CMakeFiles/cmTC_bc4de.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: language not recognized: 'openmp'
+clang: warning: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx: 'linker' input unused
+make[1]: *** [CMakeFiles/cmTC_bc4de.dir/src.cxx.o] Error 1
+make: *** [cmTC_bc4de/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cdd02/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_cdd02.dir/build.make CMakeFiles/cmTC_cdd02.dir/build
+Building CXX object CMakeFiles/cmTC_cdd02.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED +Oopenmp   -o CMakeFiles/cmTC_cdd02.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: no such file or directory: '+Oopenmp'
+make[1]: *** [CMakeFiles/cmTC_cdd02.dir/src.cxx.o] Error 1
+make: *** [cmTC_cdd02/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_00990/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_00990.dir/build.make CMakeFiles/cmTC_00990.dir/build
+Building CXX object CMakeFiles/cmTC_00990.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED -qsmp   -o CMakeFiles/cmTC_00990.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-qsmp'
+make[1]: *** [CMakeFiles/cmTC_00990.dir/src.cxx.o] Error 1
+make: *** [cmTC_00990/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5b0a/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_b5b0a.dir/build.make CMakeFiles/cmTC_b5b0a.dir/build
+Building CXX object CMakeFiles/cmTC_b5b0a.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -DOpenMP_FLAG_DETECTED -mp   -o CMakeFiles/cmTC_b5b0a.dir/src.cxx.o -c /Users/Maiky/Dropbox/KTH/DH2320/Assignments/dh2320-labs/Assignment05/code/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-mp'
+make[1]: *** [CMakeFiles/cmTC_b5b0a.dir/src.cxx.o] Error 1
+make: *** [cmTC_b5b0a/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
