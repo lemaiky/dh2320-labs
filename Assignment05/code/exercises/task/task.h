@@ -32,15 +32,14 @@ void Chaikin(const std::vector< ogl::Vec2f >& ControlPolygon, const size_t MinNu
 
 }
 
-
 void DefineBallisticParabolaControlPolygon(const ogl::Vec3f& ShootingTankPos, const ogl::Vec3f& TargetTankPos,
                                            std::vector< ogl::Vec3f >& ControlPolygon)
 {
     //TODO: Define the control polygon so that the the projectile will move from the
     //shooting tank to the target following a parabola
-    ControlPolygon.push_back(ogl::Vec3f(10,10,0));
-    ControlPolygon.push_back(ogl::Vec3f(0,0,5));
     ControlPolygon.push_back(ShootingTankPos);
+    ControlPolygon.push_back(ogl::Vec3f(0,0,5));
+    ControlPolygon.push_back(TargetTankPos);
 }
 
 
@@ -54,10 +53,17 @@ void Bezier(const std::vector< ogl::Vec3f >& ControlPolygon, const int NumPoints
     //For task 5.2 a quadratic bezier curve suffices
     //For the bonus task 5.3, make this work for an arbitrary number of control points
     //Here, just a simple thing, not a Bezier Curve
+
+    std::vector< ogl::Vec3f > tempPolygon;
+    std::copy(ControlPolygon.begin(), ControlPolygon.end(), std::back_inserter(tempPolygon));
+
     for(int i(0);i<NumPoints;i++)
     {
         const float t = float(i) / float(NumPoints-1);
-        BezierCurve[i] = (1-t) * ControlPolygon.front() + t * ControlPolygon.back();
+        
+        BezierCurve[i] = float(pow(1-t, 2)) * tempPolygon[0] + 2 * t * (1-t) * tempPolygon[1] + float(pow(t, 2)) * tempPolygon[2];
+        //BezierCurve[i] = (1-t) * ControlPolygon.front() + t * ControlPolygon.back();
+
         BezierCurve[i][2] = 5 - pow(4*(t-0.5f), 2); //Give it some arbitrary height
     }
 }
