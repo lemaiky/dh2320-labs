@@ -5,19 +5,31 @@ void Chaikin(const std::vector< ogl::Vec2f >& ControlPolygon, const size_t MinNu
     Curve.clear();
 
     const int NumPointsPerPolygonLeg = 1 + (int)MinNumDesiredPoints / ((int)ControlPolygon.size());
-    Curve.reserve(NumPointsPerPolygonLeg * ControlPolygon.size());
-    for(int i(0);i<(int)ControlPolygon.size();i++)
-    {
-        const ogl::Vec2f& LeftPoint = ControlPolygon[i];
-        const ogl::Vec2f& RightPoint = ControlPolygon[(i+1) % ControlPolygon.size()];
+    int noOfIterations = log(NumPointsPerPolygonLeg) / log(2);
 
-        //Linearly interpolate between left and right point in the t-interval [0,1)
-        for(int j(0);j<NumPointsPerPolygonLeg;j++)
-        {
-            const float t = float(j) / float(NumPointsPerPolygonLeg); //Gives values from 0 to almost 1
-            Curve.push_back((1-t) * LeftPoint + t * RightPoint);
+    Curve.reserve(NumPointsPerPolygonLeg * ControlPolygon.size());
+
+    std::vector< ogl::Vec2f > points;
+
+    std::copy(ControlPolygon.begin(), ControlPolygon.end(), std::back_inserter(points));
+
+    for(int i(0); i < noOfIterations; i++) {
+        for(int j(0); j < (int)points.size(); j++) {
+
+          const ogl::Vec2f& LeftPoint = points[j];
+          const ogl::Vec2f& RightPoint = points[(j+1) % points.size()];
+          
+          const float t = 0.75;
+          Curve.push_back(t * LeftPoint + (1-t) * RightPoint);
+          Curve.push_back((1-t) * LeftPoint + t * RightPoint);
+
         }
+        points.clear();
+        std::copy(Curve.begin(), Curve.end(), std::back_inserter(points));
+        Curve.clear();
     }
+    std::copy(points.begin(), points.end(), std::back_inserter(Curve));
+
 }
 
 
