@@ -6,8 +6,8 @@ namespace rt{
 
 	Volume::Volume(void)
 	{
-		MaxVal = DBL_MIN;
-		MinVal = DBL_MAX;
+		MaxVal = std::numeric_limits<float>().min();
+        MinVal = std::numeric_limits<float>().max();
 	}
 
 	Volume::~Volume(void)

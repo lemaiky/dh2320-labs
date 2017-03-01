@@ -126,8 +126,18 @@ Vec4d VolumeRaycaster::getFirstHit(int x, int y, double isovalue)
 {
     //Task 1
     //Note: We use the same projection as in getAverage()
+    Vec3i dims = getVolumeDims();
 
-    return Vec4d(0, 0, 0, 0);
+    double val;
+    for (int z = 0; z < dims.z(); z++)
+    {   
+        val = volume.F(x, y, z);
+
+        if( val > isovalue) {
+            return tf.interpolateColor(val);
+        }
+    }
+    return tf.interpolateColor(0.0);
 }
 
 Vec4d VolumeRaycaster::getMaximum(int x, int y)
