@@ -22,8 +22,8 @@ int Task1(rt::VolumeRaycaster& vraycaster)
     //////////////////////////////////////////////////////////////////
     
     //Call appropriate render function: Change this!
-    vraycaster.renderToImage_Average(tf, image);
-    //vraycaster.renderToImage_FirstHit(tf, <insert isovalue here>, image);
+    //vraycaster.renderToImage_Average(tf, image);
+    vraycaster.renderToImage_FirstHit(tf, 0.65, image);
     //vraycaster.renderToImage_Maximum(tf, image);
 
     //////////////////////////////////////////////////////////////////
@@ -54,8 +54,8 @@ int Task2(rt::VolumeRaycaster& vraycaster)
     //////////////////////////////////////////////////////////////////
     
     //Call appropriate render function: Change this!
-    vraycaster.renderToImage_AccumBackToFront(tf, image);
-    //vraycaster.renderToImage_AccumFrontToBack(tf, image);
+    //vraycaster.renderToImage_AccumBackToFront(tf, image);
+    vraycaster.renderToImage_AccumFrontToBack(tf, image);
 
     //////////////////////////////////////////////////////////////////
 
@@ -127,10 +127,16 @@ int Task3(rt::VolumeRaycaster& vraycaster)
     // - The first value is the data value. It ranges from 0 to 1.
     // - The second value is the color and opacity. The components range from 0 to 1.
     tf.addKey(rt::TFKey(0, rt::Vec4d(0, 0, 0, 0)));
+    
+    tf.addKey(rt::TFKey(0.35, rt::Vec4d(1, 1, 1, 0)));
+    tf.addKey(rt::TFKey(0.4, rt::Vec4d(1, 1, 1, 0.1)));
+    tf.addKey(rt::TFKey(0.45, rt::Vec4d(1, 1, 1, 0)));
+    
+    tf.addKey(rt::TFKey(0.80, rt::Vec4d(0, 1, 1, 0.0)));
+    tf.addKey(rt::TFKey(0.65, rt::Vec4d(0, 0.8, 1, 0.6)));
+    tf.addKey(rt::TFKey(0.60, rt::Vec4d(0, 0, 1, 0.0)));
 
-    //...more keys...
-
-    tf.addKey(rt::TFKey(1, rt::Vec4d(1, 1, 1, 0)));
+    tf.addKey(rt::TFKey(1, rt::Vec4d(0, 0, 0, 0)));
 
     tf.print();
 
@@ -172,10 +178,10 @@ int main(int argc, char** argv)
     //////////////////////////////////////////////////////////////////
 
     //Call the respective task
-    return Task1(vraycaster);
+    //return Task1(vraycaster);
     //return Task2(vraycaster);
     //return Task2_Test(vraycaster);
-    //return Task3(vraycaster);
+    return Task3(vraycaster);
 
     //////////////////////////////////////////////////////////////////
 }

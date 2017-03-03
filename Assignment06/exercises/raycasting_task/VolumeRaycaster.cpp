@@ -139,29 +139,75 @@ Vec4d VolumeRaycaster::getFirstHit(int x, int y, double isovalue)
     }
     return tf.interpolateColor(0.0);
 }
-
-Vec4d VolumeRaycaster::getMaximum(int x, int y)
-{
-    //Task 1
-    //Note: We use the same projection as in getAverage()
-
-    return Vec4d(0, 0, 0, 0);
+    
+    Vec4d VolumeRaycaster::getMaximum(int x, int y)
+    {
+        //Task 1
+        //Note: We use the same projection as in getAverage()
+        Vec3i dims = getVolumeDims();
+        
+        double max = 0;
+        for (int z = 0; z < dims.z(); z++)
+        {
+            const double val = volume.F(x, y, z);
+            if(val > max)
+                max = val;
+        }
+        
+        return tf.interpolateColor(max);
+    }
+    
+    Vec4d VolumeRaycaster::accummulateFrontToBack(int x, int y)
+    {
+        //Task 2
+        //Note: We use the same projection as in getAverage()
+        
+        Vec3i dims = getVolumeDims();
+        
+        Vec4d cOut(0,0,0,0);
+        double aOut = 0;
+        
+        // Cout = Cin + (1 - αin) αC
+        // αout = αin + (1 - αin) α
+        for (int z = 0; z < dims.z(); z++)
+        {
+            const double val = volume.F(x, y, z);
+            Vec4d color = tf.interpolateColor(val);
+            
+            cOut = cOut + (1 - aOut) * color * color.a();
+            aOut = (1 - aOut) * color.a() + aOut;
+            cOut.a() = aOut;
+            
+            if(aOut >= 1){
+                break;
+            }
+        }
+        
+        return cOut;
+    }
+    
+    Vec4d VolumeRaycaster::accummulateBackToFront(int x, int y)
+    {
+        //Task 2
+        //Note: We use the same projection as in getAverage()
+        Vec3i dims = getVolumeDims();
+        
+        Vec4d cOut(0,0,0,0);
+        double aOut = 0;
+        
+        // Cout = (1 - α) Cin + αC
+        // αout = (1 - α) αin + α
+        for (int z = dims.z()-1; z >= 0; z--)
+        {
+            const double val = volume.F(x, y, z);
+            Vec4d color = tf.interpolateColor(val);
+            
+            cOut = (1 - color.a()) * cOut + color.a() * color;
+            aOut = (1 - color.a()) * aOut + color.a();
+            cOut.a() = aOut;
+        }
+        
+        return cOut;
+    }
 }
 
-Vec4d VolumeRaycaster::accummulateFrontToBack(int x, int y)
-{
-    //Task 2
-    //Note: We use the same projection as in getAverage()
-
-    return Vec4d(0, 0, 0, 0);
-}
-
-Vec4d VolumeRaycaster::accummulateBackToFront(int x, int y)
-{
-    //Task 2
-    //Note: We use the same projection as in getAverage()
-
-    return Vec4d(0, 0, 0, 0);
-}
-
-}
